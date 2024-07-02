@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    username: streben
+    url: jdbc:postgresql://localhost:5432/db_user
+    password: streben
+    driverClassName: org.postgresql.Driver
+ 
+ 
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      show-sql: true
+      ddl-auto: none
+server:
+  port: 8080
+  servlet:
+    context-path: /demo-employee
+  error:
+    include-stacktrace: always
