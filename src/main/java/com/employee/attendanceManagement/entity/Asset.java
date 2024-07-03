@@ -32,9 +32,9 @@ public class Asset {
 
     private String returnDate;
 
-    private boolean isDeleted ;
+    private Boolean isDeleted ;
 
-    private boolean approval;
+    private Boolean approval;
     
     @ManyToOne
     @JoinColumn(name = "user_id")

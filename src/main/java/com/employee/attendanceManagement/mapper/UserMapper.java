@@ -14,6 +14,8 @@ public interface UserMapper {
 
 	UserResponse toResponse(UserEntity user);
 
-	List<UserResponse> toResponseDto(java.util.List<UserEntity> byIsDeletedFalse);
+	List<UserResponse> toResponseDto(List<UserEntity> byIsDeletedFalse);
+
+	
 
 }

@@ -1,7 +1,5 @@
 package com.employee.attendanceManagement.dto;
 
-import com.employee.attendanceManagement.entity.UserEntity;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,15 +9,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class AssetRequest {
 
-
 	    private String name;
 
 	    private String collectedDate;
 
 	    private String returnDate;
 
-	    private boolean approval;
+	    private Boolean approval;
 
-	    private UserEntity user;
+	    
 
 }

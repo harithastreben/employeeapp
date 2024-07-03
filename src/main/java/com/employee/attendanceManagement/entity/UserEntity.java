@@ -12,10 +12,9 @@ import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -36,7 +35,7 @@ public class UserEntity {
     @NotNull(message="this field can't be empty")
     private String department;
 
-    private boolean isDeleted ;
+    private Boolean isDeleted ;
 
     @OneToMany(mappedBy = "user",cascade=CascadeType.ALL)
     private List<Asset> assets;
@@ -49,4 +48,69 @@ public class UserEntity {
  
 		isDeleted = false;
 	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(String dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+
+	public boolean isDeleted() {
+		return isDeleted;
+	}
+
+	public void setDeleted(boolean isDeleted) {
+		this.isDeleted = isDeleted;
+	}
+
+	public List<Asset> getAssets() {
+		return assets;
+	}
+
+	public void setAssets(List<Asset> assets) {
+		this.assets = assets;
+	}
+
+	public List<Attendance> getAttendances() {
+		return attendances;
+	}
+
+	public void setAttendances(List<Attendance> attendances) {
+		this.attendances = attendances;
+	}
+	
 }

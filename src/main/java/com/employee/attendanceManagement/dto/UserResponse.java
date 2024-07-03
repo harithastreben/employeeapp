@@ -2,10 +2,8 @@ package com.employee.attendanceManagement.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
 public class UserResponse {
 	
@@ -18,6 +16,8 @@ public class UserResponse {
     private String address;
 
     private String department;
+
+
 
 
 }

@@ -1,7 +1,5 @@
 package com.employee.attendanceManagement.dto;
 
-import com.employee.attendanceManagement.entity.UserEntity;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,9 +16,9 @@ public class AssetResponse {
 
 	    private String returnDate;
 
+	    private Boolean approval;
 
 
-	    private boolean approval;
 
-	    private UserEntity user;
+
 }
